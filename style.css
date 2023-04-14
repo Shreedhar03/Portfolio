@@ -95,6 +95,9 @@ ul li a:hover{
     display: none;
     font-size: 45px;
 }
+.hide{
+    display: none!important;
+}
 .theme {
     /* color: rgb(2, 130, 144); */
     /* color: #0074a6; */
@@ -669,6 +672,9 @@ input[type=reset] {
         right: 10%;
         top: 2%;
         z-index: 10;
+    }
+    .hide{
+        display: block!important;
     }
     .nav-height{
         height: 80px;
