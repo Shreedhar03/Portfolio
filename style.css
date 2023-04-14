@@ -9,7 +9,6 @@
     margin: 0;
     padding: 0;
     user-select: none;
-    /* overflow-x: hidden; */
     font-family: 'Sora';
 }
 .arvo{
@@ -25,10 +24,10 @@ a {
     font:50px 'oneSignature';
     font-weight: 400;
     /* margin: 1rem 0 0 5rem; */
-    padding: 0 10px;
+
 }
 .braces{
-    font: 30px 'Nunito Sans';
+    font: 20px 'Nunito Sans';
 }
 body {
     background-color: rgb(255, 255, 255);
@@ -65,11 +64,37 @@ section {
     justify-content: space-around;
     align-items: center;
 }
-
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky !important;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(70px);
+    /* background-color: #16181c; */
+    padding: 18px 0 0 0;
+    transition: all 0.5s ease!important;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+ul li a{
+    font-size: 22px;
+}
+ul li a:hover{
+    color:rgb(8, 126, 164);
+}
 .txt-center {
     text-align: center;
 }
-
+.toggler{
+    display: none;
+    font-size: 45px;
+}
 .theme {
     /* color: rgb(2, 130, 144); */
     /* color: #0074a6; */
@@ -124,18 +149,6 @@ a {
 #nav-link {
     color: black;
     transition: all 0.5s;
-} */
-
-nav {
-    position: sticky !important;
-    top: 0;
-    z-index: 10;
-    /* background:transparent; */
-    backdrop-filter: blur(10px);
-}
-
-/* .navbar-toggler {
-    background-color: rgb(218, 229, 246) !important;
 } */
 
 #dark_btn {
@@ -628,8 +641,8 @@ input[type=reset] {
         bottom: 0;
         left: 0;
         width: 0%;
-        height: 1.5px;
-        background-color: rgb(2, 130, 144);
+        height: 2px;
+        background-color: rgb(8, 126, 164);
         transition: all 0.5s ease;
     }
     li a:hover::after{
@@ -640,10 +653,32 @@ input[type=reset] {
     html {
         font-size: 90%;
     }
-
+    nav{
+        flex-direction: column!important;
+        align-items: start;
+        padding: 18px 50px;
+        gap: 40px;
+        height: 500px;
+        justify-content: flex-start;
+        overflow: hidden;
+        backdrop-filter: blur(50px);
+    }
+    .toggler{
+        display: block;
+        position: fixed;
+        right: 10%;
+        top: 2%;
+        z-index: 10;
+    }
+    .nav-height{
+        height: 80px;
+    }
+    nav ul{
+        flex-direction: column;
+    }
     #dark_btn {
         left: 92%;
-        top: 11%;
+        top: 16%;
     }
     .up{
         left: 92%;
@@ -670,7 +705,7 @@ input[type=reset] {
 
     #dark_btn {
         left: 92%;
-        top: 11%;
+        top: 14%;
     }
     .up{
         left: 92%;
@@ -691,6 +726,17 @@ input[type=reset] {
 @media screen and (max-width:400px) {
     html {
         font-size: 75%;
+    }
+    .logo{
+        font-size: 38px;
+        position: relative;
+        right: 30px;
+    }
+    .toggler{
+        position: fixed;
+        right: 2%;
+        top: 3%;
+        font-size: 36px;
     }
     .setting {
         top: 12%;
@@ -727,7 +773,7 @@ input[type=reset] {
 
     #dark_btn {
         position: fixed;
-        top: 11%;
+        top: 14%;
         left: 92%;
     }
 

@@ -29,42 +29,6 @@ function more() {
 
 let theme = document.querySelectorAll('.theme')
 let themebg = document.querySelectorAll('.themebg')
-// console.log(theme)
-// console.log(themebg)
-
-
-function red() {
-    for (let i = 0; i < theme.length; i++) {
-        document.querySelectorAll('.theme')[i].style.color = "rgb(237, 8, 8)"
-    }
-    for (let i = 0; i < themebg.length; i++) {
-        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(237, 8, 8)"
-    }
-}
-function blue() {
-    for (let i = 0; i < theme.length; i++) {
-        document.querySelectorAll('.theme')[i].style.color = "rgb(4, 65, 219)"
-    }
-    for (let i = 0; i < themebg.length; i++) {
-        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(4, 65, 219)"
-    }
-}
-function cyan() {
-    for (let i = 0; i < theme.length; i++) {
-        document.querySelectorAll('.theme')[i].style.color = "rgb(3, 152, 152)"
-    }
-    for (let i = 0; i < themebg.length; i++) {
-        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(3, 152, 152)"
-    }
-}
-function gold() {
-    for (let i = 0; i < theme.length; i++) {
-        document.querySelectorAll('.theme')[i].style.color = "rgb(219, 162, 4)"
-    }
-    for (let i = 0; i < themebg.length; i++) {
-        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(219, 162, 4)"
-    }
-}
 
 
 let anchor = document.querySelectorAll('a')
@@ -73,12 +37,12 @@ for (let i = 6; i < anchor.length; i++) {
     document.querySelectorAll('a')[i].setAttribute("target", "_blank")
 };
 
-document.querySelector('#up').removeAttribute('target')
+// document.querySelector('#up').removeAttribute('target')
 
 document.querySelector('#dark_btn').addEventListener('click', mode_toggle)
 
 function mode_toggle() {
-    // document.querySelector('nav').classList.toggle('mode')
+    document.querySelector('nav').classList.toggle('mode')
     document.querySelector('body').classList.toggle('mode')
     document.querySelector('textarea').classList.toggle('text-bg-dark')
 
@@ -104,16 +68,34 @@ function mode_toggle() {
 
 
 
-let collapse = document.querySelector('.navbar-collapse')
-let toggler = document.querySelectorAll('.nav-item')
+let collapse = document.querySelector('nav')
+let toggler = document.querySelectorAll('.li-s')
 
 toggler.forEach((item) => {
     item.addEventListener('click', () => {
-        collapse.classList.toggle('show')
+        collapse.classList.toggle('nav-height')
     })
 })
 
+let togglerr = document.querySelector('.toggler')
 
+const handleRightMenu =()=>{
+    togglerr.classList.remove('bx-menu-alt-right')
+    togglerr.classList.add('bx-menu-alt-left')
+}
+const handleLeftMenu =()=>{
+    togglerr.classList.remove('bx-menu-alt-left')
+    togglerr.classList.add('bx-menu-alt-right')
+}
+
+
+togglerr.addEventListener('click' , ()=>{
+    togglerr.classList.contains('bx-menu-alt-right') ? 
+        handleRightMenu() : handleLeftMenu() ; 
+
+    document.querySelector('nav').classList.toggle('nav-height')
+    togglerr.classList.toggle('menu-position')
+})
 
 // ------------------ Rough --------------------
 
@@ -219,5 +201,37 @@ toggler.forEach((item) => {
 // document.body.getElementsByClassName('cyan')[0].addEventListener('click',cyan)
 // document.body.getElementsByClassName('gold')[0].addEventListener('click',gold)
 
+function red() {
+    for (let i = 0; i < theme.length; i++) {
+        document.querySelectorAll('.theme')[i].style.color = "rgb(237, 8, 8)"
+    }
+    for (let i = 0; i < themebg.length; i++) {
+        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(237, 8, 8)"
+    }
+}
+function blue() {
+    for (let i = 0; i < theme.length; i++) {
+        document.querySelectorAll('.theme')[i].style.color = "rgb(4, 65, 219)"
+    }
+    for (let i = 0; i < themebg.length; i++) {
+        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(4, 65, 219)"
+    }
+}
+function cyan() {
+    for (let i = 0; i < theme.length; i++) {
+        document.querySelectorAll('.theme')[i].style.color = "rgb(3, 152, 152)"
+    }
+    for (let i = 0; i < themebg.length; i++) {
+        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(3, 152, 152)"
+    }
+}
+function gold() {
+    for (let i = 0; i < theme.length; i++) {
+        document.querySelectorAll('.theme')[i].style.color = "rgb(219, 162, 4)"
+    }
+    for (let i = 0; i < themebg.length; i++) {
+        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(219, 162, 4)"
+    }
+}
 
 */
