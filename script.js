@@ -13,7 +13,7 @@ let loaderFunc1 = () => {
 }
 
 let loaderFunc = () => {
-    setTimeout(loaderFunc1, 100)
+    setTimeout(loaderFunc1, 1500)
 }
 
 function dark() {
@@ -21,10 +21,6 @@ function dark() {
 }
 
 // document.body.getElementsByClassName('setting')[0].addEventListener("click",more)
-
-function more() {
-    document.body.getElementsByClassName('setting-more')[0].classList.toggle('show_setting')
-}
 
 
 let theme = document.querySelectorAll('.theme')
@@ -73,7 +69,9 @@ let toggler = document.querySelectorAll('.li-s')
 
 toggler.forEach((item) => {
     item.addEventListener('click', () => {
-        collapse.classList.toggle('nav-height')
+
+            collapse.classList.toggle('nav-height')
+
     })
 })
 

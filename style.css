@@ -69,9 +69,10 @@ nav{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    position: sticky !important;
+    position: fixed !important;
     top: 0;
     z-index: 10;
+    width: 100vw;
     backdrop-filter: blur(70px);
     /* background-color: #16181c; */
     padding: 18px 0 0 0;
@@ -159,6 +160,7 @@ a {
     top: 13%;
     left: 97%;
     cursor: pointer;
+    z-index: 10;
 }
 
 section {
@@ -169,7 +171,9 @@ section {
 #Home {
     padding-top: 5.5rem;
 }
-
+#Home div{
+    padding-top: 2rem;
+}
 .dark_mode {
     background-color: rgb(1, 36, 50) !important;
     color: beige !important;
@@ -661,10 +665,14 @@ input[type=reset] {
         align-items: start;
         padding: 18px 50px;
         gap: 40px;
-        height: 500px;
+        /* display: none; */
+        height: 80px;
         justify-content: flex-start;
         overflow: hidden;
         backdrop-filter: blur(50px);
+    }
+    .animated-icon{
+        width: 250px!important;
     }
     .toggler{
         display: block;
@@ -677,7 +685,8 @@ input[type=reset] {
         display: block!important;
     }
     .nav-height{
-        height: 80px;
+        /* display: block; */
+        height: 100vh;
     }
     nav ul{
         flex-direction: column;
