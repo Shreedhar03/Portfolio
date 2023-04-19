@@ -73,10 +73,11 @@ nav{
     top: 0;
     z-index: 10;
     width: 100vw;
-    backdrop-filter: blur(70px);
+    background-color: inherit;
+    /* backdrop-filter: blur(70px); */
     /* background-color: #16181c; */
     padding: 18px 0 0 0;
-    transition: all 0.5s ease!important;
+    transition: height 0.5s ease!important;
 }
 nav ul{
     display: flex;
@@ -89,6 +90,17 @@ ul li a{
 ul li a:hover{
     color:rgb(8, 126, 164);
 }
+#cv{
+    color: white;
+    font-size: 18px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+#cv:hover::after{
+    display: none   ;
+}
+
 .txt-center {
     text-align: center;
 }
@@ -655,6 +667,11 @@ input[type=reset] {
     li a:hover::after{
         width: 100%;
     }
+    #cv:hover{
+        background-color: rgb(103, 174, 197);
+        /* border: 1px solid white; */
+        color: black;
+    }
 }
 @media screen and (max-width:992px) {
     html {
@@ -669,7 +686,7 @@ input[type=reset] {
         height: 80px;
         justify-content: flex-start;
         overflow: hidden;
-        backdrop-filter: blur(50px);
+        /* backdrop-filter: blur(50px); */
     }
     .animated-icon{
         width: 250px!important;
