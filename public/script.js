@@ -13,7 +13,7 @@ let loaderFunc1 = () => {
 }
 
 let loaderFunc = () => {
-    setTimeout(loaderFunc1, 1500)
+    setTimeout(loaderFunc1, 0)
 }
 
 function dark() {
