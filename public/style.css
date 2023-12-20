@@ -746,6 +746,10 @@ input[type=reset] {
         left: 92%;
 
     }
+    #Home {
+        /* background-color: aqua; */
+        padding: 6.5rem 0 1.5rem 0;
+    }
     #Home .img {
         width: 75% !important;
     }
