@@ -735,10 +735,9 @@ input[type=reset] {
         font-size: 80%;
     }
 
-    /* #dark_btn {
-        left: 92%;
-        top: 14%;
-    } */
+    #dark_btn {
+        font-size: 1.8rem!important;
+    }
     nav{
         padding: 16px 16px 24px 48px!important;
     }
