@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=DM+Sans&family=Marvel:wght@400;700&family=Poppins&family=Sora&family=Ubuntu&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 @font-face {
     font-family: 'oneSignature';
     src: url('OneSignature.otf');
@@ -25,6 +25,10 @@ a {
     margin: 0!important;
     /* margin: 1rem 0 0 5rem; */
 
+}
+.shri{
+    text-shadow: 1px 1px #444, -1px -1px white, 0px 2px 4px #999, 0 0 24px white;
+    font-family: 'Rubik Doodle Shadow';
 }
 .braces{
     font: 20px 'Nunito Sans';
@@ -53,15 +57,31 @@ body::-webkit-scrollbar-thumb {
 
 .socials{
     display: flex;
-    gap: 16px;
+    gap: 12px;
     align-items: center;
+    border: 1px solid #476a75;
+    padding: 0 12px;
+    border-radius: 15px;
+}
+.socials-box{
+    display: flex;
+    /* align-items: ; */
+    gap: 16px;
+}
+.social-icon{
+    width: 30px;
 }
 .resume-btn{
-    border: 1px solid #087ea4;
+    color: #087ea4;
+    /* border: 1px solid ; */
     display: flex;
     align-items: center;
     padding: 12px;
     border-radius: 15px;
+    box-shadow: 0px 0px 2px 1px #087ea4;
+}
+.resume-btn:hover{
+    color: #087ea4;
 }
 section {
     width: 100%;
@@ -167,12 +187,9 @@ section {
 }
 
 #Home {
-    /* padding-top: 5.5rem; */
     padding: 5.5rem 3rem;
 }
-#Home div{
-    padding-top: 2rem;
-}
+
 .dark_mode {
     background-color: rgb(1, 36, 50) !important;
     color: beige !important;
@@ -205,10 +222,8 @@ section {
 .txt h5 {
     font-size: 1.4rem;
     opacity: 1;
-    transition: all 0.8s ease;
     margin-top: 2rem;
-    font-family: 'Arvo';
-    color:rgb(141, 141, 139)
+    /* font-family: 'Arvo'; */
     /* font-weight: 600; */
     /* letter-spacing: 1px; */
 }
@@ -222,8 +237,8 @@ section {
 }
 
 .img {
-    height: 33rem;
-    width: 33rem;
+    height: 28rem;
+    width: 28rem;
     margin-top: 2rem;
 }
 
@@ -329,8 +344,9 @@ section {
     flex-direction: row-reverse;
 }
 .skills-container{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
     gap: 36px;
 }
 .skills-inner-box{
@@ -580,7 +596,9 @@ input[type=reset] {
         text-align: center;
         margin: 0;
     }
-
+    .skills-container{
+        flex-direction: row!important;
+    }
     .flex {
         flex-direction: column !IMPORTANT;
     }
@@ -758,11 +776,6 @@ input[type=reset] {
 
     .progress-out {
         width: 30rem;
-    }
-    .skills-container{
-        display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 36px;
     }
     .skills-inner-box{
         /* background-color: beige; */
