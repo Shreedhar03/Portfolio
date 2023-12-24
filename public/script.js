@@ -87,149 +87,22 @@ const handleLeftMenu =()=>{
 }
 
 
-togglerr.addEventListener('click' , ()=>{
-    togglerr.classList.contains('bx-menu-alt-right') ? 
-        handleRightMenu() : handleLeftMenu() ; 
+// togglerr.addEventListener('click' , ()=>{
+//     togglerr.classList.contains('bx-menu-alt-right') ? 
+//         handleRightMenu() : handleLeftMenu() ; 
 
-    document.querySelector('nav').classList.toggle('nav-height')
-    togglerr.classList.toggle('menu-position')
+//     document.querySelector('nav').classList.toggle('nav-height')
+//     togglerr.classList.toggle('menu-position')
+// })
+
+window.addEventListener('scroll',()=>{
+    let height = window.scrollY
+    let logo = document.querySelector(".logo")
+    console.log(height)
+    if(height<190){
+        if(!logo.classList.contains('hidden'))
+            logo.classList.add('hidden')
+    } else{
+        logo.classList.remove('hidden')
+    }
 })
-
-// ------------------ Rough --------------------
-
-
-
-/*
-
-// t1="I'm "
-
-// let i=0
-// let write1 = ()=>
-// {
-//     document.getElementById('my-name').innerHTML += t1.charAt(i)
-//     i++
-
-//     if(i>t1.length)
-//     {
-//         clearInterval(write_name1)
-//     }
-// }
-
-// write_name1 = setInterval(write1,200)
-
-
-// t2="Shreedhar Urawane"
-// let j=0
-// let write2 = ()=>
-// {
-//     document.body.getElementsByClassName('shri')[0].innerHTML += t2.charAt(j)
-//     j++
-
-//     if(j>t2.length)
-//     {
-//         clearInterval(write_name2)
-//     }
-// }
-
-// setTimeout(wrt2,1000)
-
-// function wrt2()
-// {
-//     write_name2 = setInterval(write2,100)
-// }
-
-
-// // t3= "UI/UX Developer"
-// // let k=0
-// let wrt3 = ()=>
-// {
-//     document.getElementById('Home').getElementsByTagName('h5')[0].style.opacity = 1
-
-//     // if(k>t3.length)
-//     // {
-//     //     clearInterval(write_name3)
-//     // }
-// }
-
-
-// setTimeout(wrt3,2100)
-
-// // function wrt3()
-// // {
-// //     write_name3 = setInterval(write3,50)
-// // }
-
-// // t4= `A UI developer's role is to translate creative software design concepts and ideas into reality using front
-// // end technology. They understand the user interface design solution both in its practical intent and creative
-// // vision, and convert it into engineered softwares.`
-
-// // let l=0
-// let wrt4 = ()=>
-// {
-//     document.getElementById('Home').getElementsByTagName('p')[0].style.opacity = 1;
-// }
-
-
-// setTimeout(wrt4,3000)
-
-
-// setTimeout(() => {
-//     document.getElementById('Home').getElementsByTagName('img')[0].style.opacity=1
-// }, 2100) ;
-
-
-// document.getElementById('dark').addEventListener("click",dark)
-
-// document.body.getElementsByClassName('gall-right')[0].setAttribute('src',`1.jpeg`)
-// let x=2
-// let gallery = () =>
-// {
-//     document.body.getElementsByClassName('gall-right')[0].setAttribute('src',`${x}.jpeg`)
-//     x++
-//     if(x==9){
-//         x=1
-//     }
-// }
-
-// setInterval(gallery,4000)
-
-
-// document.body.getElementsByClassName('red')[0].addEventListener('click',red)
-// document.body.getElementsByClassName('blue')[0].addEventListener('click',blue)
-// document.body.getElementsByClassName('cyan')[0].addEventListener('click',cyan)
-// document.body.getElementsByClassName('gold')[0].addEventListener('click',gold)
-
-function red() {
-    for (let i = 0; i < theme.length; i++) {
-        document.querySelectorAll('.theme')[i].style.color = "rgb(237, 8, 8)"
-    }
-    for (let i = 0; i < themebg.length; i++) {
-        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(237, 8, 8)"
-    }
-}
-function blue() {
-    for (let i = 0; i < theme.length; i++) {
-        document.querySelectorAll('.theme')[i].style.color = "rgb(4, 65, 219)"
-    }
-    for (let i = 0; i < themebg.length; i++) {
-        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(4, 65, 219)"
-    }
-}
-function cyan() {
-    for (let i = 0; i < theme.length; i++) {
-        document.querySelectorAll('.theme')[i].style.color = "rgb(3, 152, 152)"
-    }
-    for (let i = 0; i < themebg.length; i++) {
-        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(3, 152, 152)"
-    }
-}
-function gold() {
-    for (let i = 0; i < theme.length; i++) {
-        document.querySelectorAll('.theme')[i].style.color = "rgb(219, 162, 4)"
-    }
-    for (let i = 0; i < themebg.length; i++) {
-        document.querySelectorAll('.themebg')[i].style.backgroundColor = "rgb(219, 162, 4)"
-    }
-}
-
-*/

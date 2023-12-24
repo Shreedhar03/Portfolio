@@ -23,6 +23,8 @@ a {
     font:50px 'oneSignature';
     font-weight: 400;
     margin: 0!important;
+    opacity: 1;
+    transition: all 0.3s ease;
     /* margin: 1rem 0 0 5rem; */
 
 }
@@ -86,7 +88,9 @@ body::-webkit-scrollbar-thumb {
 section {
     width: 100%;
 }
-
+.hidden{
+    opacity: 0;
+}
 .flex {
     display: flex;
     justify-content: space-around;
@@ -345,6 +349,7 @@ section {
 }
 .skills-container{
     display: flex;
+    justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
     gap: 36px;
