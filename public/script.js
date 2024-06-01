@@ -139,21 +139,29 @@ const projects = [
         liveLink: 'https://noteattendance13.web.app'
     },
     {
-        name: 'taskDone',
-        imageSrc: 'images/taskdone.png',
-        description: 'Full stack todo application with graphical representation',
-        techStack: "React | MongoDB | Material-Tailwind",
-        githubLink: 'https://github.com/Shreedhar03/taskDone',
-        liveLink: 'https://taskdone03.web.app'
+        name: 'CuisineCraft',
+        imageSrc: 'images/cuisine.png',
+        description: "Application to display and manage your restaurant's digital menu",
+        techStack: "PHP | SQL | TailwindCSS",
+        githubLink: 'https://github.com/Shreedhar03/cuisine-craft',
+        liveLink: 'https://github.com/Shreedhar03/cuisine-craft',
     },
-    {
-        name: 'AccuWeather',
-        imageSrc: 'images/accuweather.png',
-        description: 'Application for checking real-time weather conditions & AQI',
-        techStack: "HTML | CSS | JS",
-        githubLink: 'https://github.com/Shreedhar03/AccuWeather',
-        liveLink: 'https://accuweather13.netlify.app/'
-    }
+    // {
+    //     name: 'taskDone',
+    //     imageSrc: 'images/taskdone.png',
+    //     description: 'Full stack todo application with graphical representation',
+    //     techStack: "React | MongoDB | Material-Tailwind",
+    //     githubLink: 'https://github.com/Shreedhar03/taskDone',
+    //     liveLink: 'https://taskdone03.web.app'
+    // },
+    // {
+    //     name: 'AccuWeather',
+    //     imageSrc: 'images/accuweather.png',
+    //     description: 'Application for checking real-time weather conditions & AQI',
+    //     techStack: "HTML | CSS | JS",
+    //     githubLink: 'https://github.com/Shreedhar03/AccuWeather',
+    //     liveLink: 'https://accuweather13.netlify.app/'
+    // }
 ];
 
 let projectContianer = document.querySelector('#projects')
