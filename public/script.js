@@ -104,7 +104,7 @@ const projects = [
         description: 'An E-commerce website with Razorpay payment gateway',
         techStack: "React | NodeJs | MongoDB",
         githubLink: 'https://github.com/Shreedhar03/UrbanCart',
-        liveLink: 'https://urbancart.cyclic.app'
+        liveLink: 'https://urbancart-shop.vercel.app'
     },
     {
         name: 'ChitChat',
