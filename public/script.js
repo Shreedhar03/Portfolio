@@ -184,3 +184,17 @@ projects.forEach(project => {
 
     projectContianer.innerHTML += projectHTML
 })
+
+const scrollTopBtn = document.querySelector('#scroll-top-btn')
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollTopBtn.style.opacity = '1'
+    } else {
+        scrollTopBtn.style.opacity = '0'
+    }
+})
+
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo(0, 0)
+})

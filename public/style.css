@@ -1076,3 +1076,25 @@ body {
   max-width: 1500px;
   margin: auto;
 }
+
+#scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #087ea4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+/* hover */
+#scroll-top-btn:hover {
+  background-color: #2c3a3f;
+}
